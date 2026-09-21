@@ -1,0 +1,202 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --ink: #14213d;
+  --paper: #f5f7fa;
+  --card: #ffffff;
+  --line: #d5dbe5;
+  --accent: #ffd23f;
+  --teal: #0f766e;
+  --radius: 6px;
+  --font-head: "Bricolage Grotesque", Arial, sans-serif;
+  --font-body: "Figtree", Arial, sans-serif;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: 2.25rem; font-weight: 800; }
+h2 { font-size: 1.5rem; font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+
+p { margin: 0 0 0.75em; max-width: 65ch; }
+
+a { color: var(--teal); }
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Header and navigation ---------- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: var(--ink);
+}
+
+.brand {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-header nav ul {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header nav a {
+  color: var(--paper);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  border-bottom-color: var(--accent);
+}
+
+.site-header a:focus-visible {
+  outline-color: var(--paper);
+}
+
+/* ---------- Hero (home page) ---------- */
+.hero {
+  padding: 4rem 1.5rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.hero h1 {
+  max-width: 20ch;
+  font-size: 2.75rem;
+}
+
+.hero p {
+  color: #c9d2e3;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius);
+}
+
+.button:hover {
+  background: #ffe07a;
+}
+
+/* ---------- Page title (catalog) ---------- */
+.page-title {
+  padding: 2.5rem 1.5rem 0.5rem;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+/* ---------- Content sections ---------- */
+.content {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* ---------- Grid and cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1.25rem;
+}
+
+.card,
+.product {
+  padding: 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.card p:last-child,
+.product p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Product details ---------- */
+.tag {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--accent);
+  border-radius: var(--radius);
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+/* ---------- How it works ---------- */
+.steps {
+  padding-left: 1.25rem;
+}
+
+.steps li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 1.5rem;
+  background: var(--ink);
+  color: #c9d2e3;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0 auto;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  h1 { font-size: 1.85rem; }
+  .hero { padding: 2.5rem 1.25rem; }
+  .hero h1 { font-size: 2rem; }
+}
