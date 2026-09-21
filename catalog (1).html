@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog | CampusMarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">CampusMarket</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html" aria-current="page">Catalog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <h1>Catalog</h1>
+      <p>Second-hand items from students, all priced in Kenyan shillings.</p>
+    </section>
+
+    <section class="controls" aria-label="Search and filter products">
+      <div class="field">
+        <label for="search">Search products</label>
+        <input type="search" id="search" placeholder="Try &quot;book&quot; or &quot;lamp&quot;" oninput="filterProducts()">
+      </div>
+      <div class="field">
+        <label for="category">Category</label>
+        <select id="category" onchange="filterProducts()">
+          <option value="all">All categories</option>
+          <option value="Textbooks">Textbooks</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Dorm">Dorm</option>
+          <option value="Stationery">Stationery</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="content" aria-labelledby="products-heading">
+      <h2 id="products-heading">All products</h2>
+      <div class="grid">
+
+        <article class="product" data-category="Textbooks" data-price="1200">
+          <p class="tag">Textbooks</p>
+          <h3>Data Structures and Algorithms</h3>
+          <p class="price">KSh 1,200</p>
+          <p class="description">Fourth edition with light pencil notes in the first three chapters.</p>
+          <div class="buy-row">
+            <label for="qty-1">Quantity</label>
+            <input type="number" id="qty-1" class="quantity" min="0" value="0" oninput="updateTotal()">
+          </div>
+          <p class="line-total">Subtotal: KSh 0</p>
+        </article>
+
+        <article class="product" data-category="Textbooks" data-price="900">
+          <p class="tag">Textbooks</p>
+          <h3>Introduction to Database Systems</h3>
+          <p class="price">KSh 900</p>
+          <p class="description">Covers SQL and normalization. No missing pages.</p>
+          <div class="buy-row">
+            <label for="qty-2">Quantity</label>
+            <input type="number" id="qty-2" class="quantity" min="0" value="0" oninput="updateTotal()">
+          </div>
+          <p class="line-total">Subtotal: KSh 0</p>
+        </article>
+
+        <article class="product" data-category="Electronics" data-price="1800">
+          <p class="tag">Electronics</p>
+          <h3>Scientific Calculator</h3>
+          <p class="price">KSh 1,800</p>
+          <p class="description">Fully working, comes with its protective cover.</p>
+          <div class="buy-row">
+            <label for="qty-3">Quantity</label>
+            <input type="number" id="qty-3" class="quantity" min="0" value="0" oninput="updateTotal()">
+          </div>
+          <p class="line-total">Subtotal: KSh 0</p>
+        </article>
+
+        <article class="product" data-category="Electronics" data-price="800">
+          <p class="tag">Electronics</p>
+          <h3>USB-C Fast Charger</h3>
+          <p class="price">KSh 800</p>
+          <p class="description">20W charger, barely used, cable included.</p>
+          <div class="buy-row">
+            <label for="qty-4">Quantity</label>
+            <input type="number" id="qty-4" class="quantity" min="0" value="0" oninput="updateTotal()">
+          </div>
+          <p class="line-total">Subtotal: KSh 0</p>
+        </article>
+
+        <article class="product" data-category="Dorm" data-price="650">
+          <p class="tag">Dorm</p>
+          <h3>LED Desk Lamp</h3>
+          <p class="price">KSh 650</p>
+          <p class="description">Adjustable neck with three brightness levels.</p>
+          <div class="buy-row">
+            <label for="qty-5">Quantity</label>
+            <input type="number" id="qty-5" class="quantity" min="0" value="0" oninput="updateTotal()">
+          </div>
+          <p class="line-total">Subtotal: KSh 0</p>
+        </article>
+
+        <article class="product" data-category="Dorm" data-price="1000">
+          <p class="tag">Dorm</p>
+          <h3>Mini Electric Kettle</h3>
+          <p class="price">KSh 1,000</p>
+          <p class="description">One litre, boils in a few minutes, fits on a hostel shelf.</p>
+          <div class="buy-row">
+            <label for="qty-6">Quantity</label>
+            <input type="number" id="qty-6" class="quantity" min="0" value="0" oninput="updateTotal()">
+          </div>
+          <p class="line-total">Subtotal: KSh 0</p>
+        </article>
+
+        <article class="product" data-category="Stationery" data-price="300">
+          <p class="tag">Stationery</p>
+          <h3>A4 Notebook Bundle</h3>
+          <p class="price">KSh 300</p>
+          <p class="description">Five ruled notebooks, never written in.</p>
+          <div class="buy-row">
+            <label for="qty-7">Quantity</label>
+            <input type="number" id="qty-7" class="quantity" min="0" value="0" oninput="updateTotal()">
+          </div>
+          <p class="line-total">Subtotal: KSh 0</p>
+        </article>
+
+        <article class="product" data-category="Stationery" data-price="250">
+          <p class="tag">Stationery</p>
+          <h3>Pen and Highlighter Set</h3>
+          <p class="price">KSh 250</p>
+          <p class="description">Twelve pens and six highlighters in a zip pouch.</p>
+          <div class="buy-row">
+            <label for="qty-8">Quantity</label>
+            <input type="number" id="qty-8" class="quantity" min="0" value="0" oninput="updateTotal()">
+          </div>
+          <p class="line-total">Subtotal: KSh 0</p>
+        </article>
+
+      </div>
+      <p id="no-results" class="no-results" hidden>No products match your search. Try a different word or category.</p>
+    </section>
+
+    <section class="total-bar" aria-label="Order total" aria-live="polite">
+      <p>Total:<strong id="total">KSh 0</strong></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>CampusMarket &copy; 2026. A semester project for CCS 2314 Web Based Programming II.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
