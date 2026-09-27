@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | CampusMarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">CampusMarket</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="register.html" aria-current="page">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <h1>Create an account</h1>
+      <p>Register to start buying and selling on CampusMarket.</p>
+    </section>
+
+    <section class="content form-section">
+      <form id="reg-form" novalidate>
+
+        <div class="field">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" name="fullname">
+          <p class="error" id="fullname-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+          <p class="error" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-row">
+            <input type="password" id="password" name="password">
+            <button type="button" id="toggle-pass" class="link-btn">Show</button>
+          </div>
+          <p class="error" id="password-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="confirm">Confirm password</label>
+          <input type="password" id="confirm" name="confirm">
+          <p class="error" id="confirm-error" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="button">Create account</button>
+      </form>
+
+      <div id="success-box" class="success-box" hidden>
+        <p>You're registered! Welcome to CampusMarket.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>CampusMarket &copy; 2026. A semester project for CCS 2314 Web Based Programming II.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
