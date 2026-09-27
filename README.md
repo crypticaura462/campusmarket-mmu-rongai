@@ -1,6 +1,6 @@
-Full Name: 
-Admission Number: 
-Live Site: 
+Full Name: WAYNE MUTUGI NYAGA
+Admission Number: CIT-227-118/2024
+Live Site: https://campusmarket-wayne.netlify.app
 
 # CampusMarket
 
