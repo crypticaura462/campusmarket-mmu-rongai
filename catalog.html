@@ -17,6 +17,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="catalog.html" aria-current="page">Catalog</a></li>
+        <li><a href="register.html">Register</a></li>
       </ul>
     </nav>
   </header>
@@ -27,67 +28,171 @@
       <p>Second-hand items from students, all priced in Kenyan shillings.</p>
     </section>
 
+    <section class="controls" aria-label="Search and filter products">
+      <div class="field">
+        <label for="search">Search products</label>
+        <input type="search" id="search" placeholder="try book or lamp">
+      </div>
+      <div class="field">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="all">All categories</option>
+          <option value="Textbooks">Textbooks</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Dorm">Dorm</option>
+          <option value="Stationery">Stationery</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- the gallery just mirrors whatever the filter leaves visible below -->
+    <section class="gallery-wrap" aria-label="Product gallery">
+      <button type="button" id="gal-prev" class="gal-btn" aria-label="Previous image">&#10094;</button>
+      <div class="gallery">
+        <img id="gal-img" src="" alt="" width="280" height="200">
+        <p id="gal-caption" class="gal-caption"></p>
+      </div>
+      <button type="button" id="gal-next" class="gal-btn" aria-label="Next image">&#10095;</button>
+    </section>
+
     <section class="content" aria-labelledby="products-heading">
       <h2 id="products-heading">All products</h2>
-      <div class="grid">
+      <div class="grid" id="product-grid">
 
-        <article class="product">
+        <article class="product" data-category="Textbooks" data-price="1200"
+          data-img="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&q=60">
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=60"
+            alt="Data Structures and Algorithms textbook lying on a desk" width="280" height="180">
           <p class="tag">Textbooks</p>
           <h3>Data Structures and Algorithms</h3>
           <p class="price">KSh 1,200</p>
-          <p>Fourth edition with light pencil notes in the first three chapters.</p>
+          <p class="description">Fourth edition with light pencil notes in the first three chapters.</p>
+          <div class="buy-row">
+            <label for="qty-1">Qty</label>
+            <input type="number" id="qty-1" class="quantity" value="0">
+          </div>
+          <p class="qty-error" aria-live="polite"></p>
+          <p class="line-total">Subtotal: KSh 0</p>
         </article>
 
-        <article class="product">
+        <article class="product" data-category="Textbooks" data-price="900"
+          data-img="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&q=60">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=300&q=60"
+            alt="Introduction to Database Systems textbook" width="280" height="180">
           <p class="tag">Textbooks</p>
           <h3>Introduction to Database Systems</h3>
           <p class="price">KSh 900</p>
-          <p>Covers SQL and normalization. No missing pages.</p>
+          <p class="description">Covers SQL and normalization. No missing pages.</p>
+          <div class="buy-row">
+            <label for="qty-2">Qty</label>
+            <input type="number" id="qty-2" class="quantity" value="0">
+          </div>
+          <p class="qty-error" aria-live="polite"></p>
+          <p class="line-total">Subtotal: KSh 0</p>
         </article>
 
-        <article class="product">
+        <article class="product" data-category="Electronics" data-price="1800"
+          data-img="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=600&q=60">
+          <img src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=300&q=60"
+            alt="Scientific calculator with its cover" width="280" height="180">
           <p class="tag">Electronics</p>
           <h3>Scientific Calculator</h3>
           <p class="price">KSh 1,800</p>
-          <p>Fully working, comes with its protective cover.</p>
+          <p class="description">Fully working, comes with its protective cover.</p>
+          <div class="buy-row">
+            <label for="qty-3">Qty</label>
+            <input type="number" id="qty-3" class="quantity" value="0">
+          </div>
+          <p class="qty-error" aria-live="polite"></p>
+          <p class="line-total">Subtotal: KSh 0</p>
         </article>
 
-        <article class="product">
+        <article class="product" data-category="Electronics" data-price="800"
+          data-img="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&q=60">
+          <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=300&q=60"
+            alt="USB-C charger with cable coiled next to it" width="280" height="180">
           <p class="tag">Electronics</p>
           <h3>USB-C Fast Charger</h3>
           <p class="price">KSh 800</p>
-          <p>20W charger, barely used, cable included.</p>
+          <p class="description">20W charger, barely used, cable included.</p>
+          <div class="buy-row">
+            <label for="qty-4">Qty</label>
+            <input type="number" id="qty-4" class="quantity" value="0">
+          </div>
+          <p class="qty-error" aria-live="polite"></p>
+          <p class="line-total">Subtotal: KSh 0</p>
         </article>
 
-        <article class="product">
+        <article class="product" data-category="Dorm" data-price="650"
+          data-img="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=60">
+          <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=300&q=60"
+            alt="Small LED desk lamp switched on" width="280" height="180">
           <p class="tag">Dorm</p>
           <h3>LED Desk Lamp</h3>
           <p class="price">KSh 650</p>
-          <p>Adjustable neck with three brightness levels.</p>
+          <p class="description">Adjustable neck with three brightness levels.</p>
+          <div class="buy-row">
+            <label for="qty-5">Qty</label>
+            <input type="number" id="qty-5" class="quantity" value="0">
+          </div>
+          <p class="qty-error" aria-live="polite"></p>
+          <p class="line-total">Subtotal: KSh 0</p>
         </article>
 
-        <article class="product">
+        <article class="product" data-category="Dorm" data-price="1000"
+          data-img="https://images.unsplash.com/photo-1585515320310-259814833e62?w=600&q=60">
+          <img src="https://images.unsplash.com/photo-1585515320310-259814833e62?w=300&q=60"
+            alt="Small electric kettle on a shelf" width="280" height="180">
           <p class="tag">Dorm</p>
           <h3>Mini Electric Kettle</h3>
           <p class="price">KSh 1,000</p>
-          <p>One litre, boils in a few minutes, fits on a hostel shelf.</p>
+          <p class="description">One litre, boils in a few minutes, fits on a hostel shelf.</p>
+          <div class="buy-row">
+            <label for="qty-6">Qty</label>
+            <input type="number" id="qty-6" class="quantity" value="0">
+          </div>
+          <p class="qty-error" aria-live="polite"></p>
+          <p class="line-total">Subtotal: KSh 0</p>
         </article>
 
-        <article class="product">
+        <article class="product" data-category="Stationery" data-price="300"
+          data-img="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600&q=60">
+          <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=300&q=60"
+            alt="Stack of ruled notebooks" width="280" height="180">
           <p class="tag">Stationery</p>
           <h3>A4 Notebook Bundle</h3>
           <p class="price">KSh 300</p>
-          <p>Five ruled notebooks, never written in.</p>
+          <p class="description">Five ruled notebooks, never written in.</p>
+          <div class="buy-row">
+            <label for="qty-7">Qty</label>
+            <input type="number" id="qty-7" class="quantity" value="0">
+          </div>
+          <p class="qty-error" aria-live="polite"></p>
+          <p class="line-total">Subtotal: KSh 0</p>
         </article>
 
-        <article class="product">
+        <article class="product" data-category="Stationery" data-price="250"
+          data-img="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=600&q=60">
+          <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=300&q=60"
+            alt="Pens and highlighters in a zip pouch" width="280" height="180">
           <p class="tag">Stationery</p>
           <h3>Pen and Highlighter Set</h3>
           <p class="price">KSh 250</p>
-          <p>Twelve pens and six highlighters in a zip pouch.</p>
+          <p class="description">Twelve pens and six highlighters in a zip pouch.</p>
+          <div class="buy-row">
+            <label for="qty-8">Qty</label>
+            <input type="number" id="qty-8" class="quantity" value="0">
+          </div>
+          <p class="qty-error" aria-live="polite"></p>
+          <p class="line-total">Subtotal: KSh 0</p>
         </article>
 
       </div>
+      <p id="no-results" class="no-results" hidden>Nothing matches that search, try something else.</p>
+    </section>
+
+    <section class="total-bar" aria-label="Order total" aria-live="polite">
+      <p>Total:<strong id="total">KSh 0</strong></p>
     </section>
   </main>
 
@@ -95,5 +200,6 @@
     <p>CampusMarket &copy; 2026. A semester project for CCS 2314 Web Based Programming II.</p>
   </footer>
 
+  <script src="app.js"></script>
 </body>
 </html>
