@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Data Structures and Algorithms",
+    "category": "Textbooks",
+    "price": 1200,
+    "description": "Fourth edition with light pencil notes in the first three chapters.",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&q=60",
+    "alt": "Data Structures and Algorithms textbook lying on a desk"
+  },
+  {
+    "id": 2,
+    "name": "Introduction to Database Systems",
+    "category": "Textbooks",
+    "price": 900,
+    "description": "Covers SQL and normalization. No missing pages.",
+    "image": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&q=60",
+    "alt": "Introduction to Database Systems textbook"
+  },
+  {
+    "id": 3,
+    "name": "Scientific Calculator",
+    "category": "Electronics",
+    "price": 1800,
+    "description": "Fully working, comes with its protective cover.",
+    "image": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=600&q=60",
+    "alt": "Scientific calculator with its cover"
+  },
+  {
+    "id": 4,
+    "name": "USB-C Fast Charger",
+    "category": "Electronics",
+    "price": 800,
+    "description": "20W charger, barely used, cable included.",
+    "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&q=60",
+    "alt": "USB-C charger with cable coiled next to it"
+  },
+  {
+    "id": 5,
+    "name": "LED Desk Lamp",
+    "category": "Dorm",
+    "price": 650,
+    "description": "Adjustable neck with three brightness levels.",
+    "image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=60",
+    "alt": "Small LED desk lamp switched on"
+  },
+  {
+    "id": 6,
+    "name": "Mini Electric Kettle",
+    "category": "Dorm",
+    "price": 1000,
+    "description": "One litre, boils in a few minutes, fits on a hostel shelf.",
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=600&q=60",
+    "alt": "Small electric kettle on a shelf"
+  },
+  {
+    "id": 7,
+    "name": "A4 Notebook Bundle",
+    "category": "Stationery",
+    "price": 300,
+    "description": "Five ruled notebooks, never written in.",
+    "image": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600&q=60",
+    "alt": "Stack of ruled notebooks"
+  },
+  {
+    "id": 8,
+    "name": "Pen and Highlighter Set",
+    "category": "Stationery",
+    "price": 250,
+    "description": "Twelve pens and six highlighters in a zip pouch.",
+    "image": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=600&q=60",
+    "alt": "Pens and highlighters in a zip pouch"
+  }
+]
